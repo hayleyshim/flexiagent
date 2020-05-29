@@ -133,8 +133,14 @@ class FWAGENT_API:
 
         :returns: Dictionary with logs and status code.
         """
+        dl_map = {
+    	    'fwagent': fwglobals.g.ROUTER_LOG_FILE,
+    	    'syslog': fwglobals.g.SYSLOG_FILE,
+            'dhcp': fwglobals.g.DHCP_LOG_FILE,
+	    }
+        file = dl_map.get(params['filter'], '')
         try:
-            logs = fwutils.get_device_logs(fwglobals.g.ROUTER_LOG_FILE, params['lines'])
+            logs = fwutils.get_device_logs(file, params['lines'])
             return {'message': logs, 'ok': 1}
         except:
             raise Exception("_get_device_logs: failed to get device logs: %s" % format(sys.exc_info()[1]))
