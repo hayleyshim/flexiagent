@@ -187,6 +187,8 @@ class Fwglobals:
         self.ROUTER_LOG_FILE     = '/var/log/flexiwan/agent.log'
         self.SYSLOG_FILE         = '/var/log/syslog'
         self.DHCP_LOG_FILE     = '/var/log/dhcpd.log'
+        self.VPP_LOG_FILE     = '/var/log/vpp/vpp.log'
+        self.FRR_LOG_FILE     = '/var/log/frr/ospfd.log'
         self.VPP_CONFIG_FILE     = '/etc/vpp/startup.conf'
         self.VPP_CONFIG_FILE_BACKUP = '/etc/vpp/startup.conf.orig'
         self.FRR_CONFIG_FILE     = '/etc/frr/daemons'

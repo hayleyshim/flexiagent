@@ -55,7 +55,7 @@ def get_device_logs(file, num_of_lines):
     """
     try:
         cmd = "tail -{} {}".format(num_of_lines, file)
-        res = subprocess.check_output(cmd, shell=True).split('\n')
+        res = subprocess.check_output(cmd, shell=True).splitlines()
 
         # On zero matching, res is a list with a single empty
         # string which we do not want to return to the caller

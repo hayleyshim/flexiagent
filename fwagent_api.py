@@ -137,6 +137,8 @@ class FWAGENT_API:
     	    'fwagent': fwglobals.g.ROUTER_LOG_FILE,
     	    'syslog': fwglobals.g.SYSLOG_FILE,
             'dhcp': fwglobals.g.DHCP_LOG_FILE,
+            'vpp': fwglobals.g.VPP_LOG_FILE,
+            'frr': fwglobals.g.FRR_LOG_FILE,
 	    }
         file = dl_map.get(params['filter'], '')
         try:
